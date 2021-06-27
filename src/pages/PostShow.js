@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 // destructure props to get post
-const PostShow = ({posts, match}) => {
+const PostShow = ({posts, match, edit, deletePost}) => {
     const id = parseInt(match.params.id) // get post id from url param
     const post = posts.find((post) => post.id === id)
 
@@ -15,6 +15,8 @@ const PostShow = ({posts, match}) => {
             <h4>{post?.contact}</h4>
             <h4>{post?.desc}</h4>
             <ReactPlayer url={post?.video} controls={true} />
+            <button onClick={(event) => edit(post)}>Edit</button>
+            <button onClick={(event) => deletePost(post)}>Delete</button>
             <Link to="/PostIndex"><button>Back</button></Link>
         </div>
     )

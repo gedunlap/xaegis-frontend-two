@@ -6,14 +6,25 @@ import Nav from "./components/Nav";
 // Import React and hooks
 import React, { useState, useEffect } from "react";
 // Import components from React Router
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
 
 function App(props) {
   // API URL
-  const url = "https://xaegis-backend-two-gd.herokuapp.com/posts";
-  //State to hold Posts
+  const url = "https://xaegis-backend-two-gd.herokuapp.com/posts/";
+  // State to hold Posts
   const [posts, setPosts] = useState([]);
+  // Null post
+  const nullPost = {
+    name: "",
+    contact: "",
+    sport: "",
+    desc: "",
+    image: "",
+    video: "",
+  }
+  // State to hold Post edit
+  const [targetPost, setTargetPost] = useState(nullPost)
 
   // ----- Functions -----
 
@@ -24,6 +35,46 @@ function App(props) {
     setPosts(data)
   }
 
+  // Funtion to add post from form data
+  const addPosts = async (newPost) => {
+    const response =  await fetch(url, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      
+      body: JSON.stringify(newPost),
+    })
+    getPosts()
+  }
+
+  // Function to select Post
+  const getTargetPost = (post) => {
+    setTargetPost(post)
+    props.history.push("/edit")
+  }
+
+  // Function to edit post on form submission
+  const updatePost = async (post) => {
+    const response = await fetch(url + post.id + "/", {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(post)
+    })
+    console.log(post.id)
+    getPosts()
+  }
+
+  const deletePost = async (post) => {
+    const response = await fetch(url + post.id, {
+      method: "delete",
+    })
+    getPosts()
+    props.history.push("/PostIndex")
+  }
+
   // ----- useEffects -----
   useEffect(() => {
     getPosts()
@@ -32,6 +83,7 @@ function App(props) {
   return (
     <div>
       <Nav />
+      <Link to="/new"><button className="button-primary">Create New</button></Link>
       <Switch>
         <Route
           exact
@@ -45,16 +97,35 @@ function App(props) {
         <Route
           path="/post/:id"
           render={(routerProps) => (
-            <PostShow {...routerProps} posts={posts} />
+            <PostShow 
+              {...routerProps} 
+              posts={posts} 
+              edit={getTargetPost}
+              deletePost={deletePost} 
+            />
           )}
         />
         <Route
           path="/new"
-          render={(routerProps) => <Form {...routerProps} />}
+          render={(routerProps) => (
+            <Form 
+              {...routerProps}
+              initialPost={nullPost}
+              handleSubmit={addPosts}
+              buttonLabel="Create Post" 
+            />
+          )}
         />
         <Route
           path="/edit"
-          render={(routerProps) => <Form {...routerProps} />}
+          render={(routerProps) => (
+            <Form
+               {...routerProps}
+               initialPost={targetPost}
+               handleSubmit={updatePost}
+               buttonLabel="Update" 
+            />
+          )}
         />
       </Switch>
     </div>

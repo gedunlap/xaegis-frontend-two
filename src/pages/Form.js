@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-const Form = ({initialTodo, handleSubmit, buttonLabel, history}) => {
+const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
 
-    const [formData, setFormData] = useState(initialTodo);
+    const [formData, setFormData] = useState(initialPost);
 
     //---- Functions -----
 
@@ -13,9 +13,9 @@ const Form = ({initialTodo, handleSubmit, buttonLabel, history}) => {
 
     // handleSubmit
     const handleSubmission = (event) => {
-        event.preventDefualt()
-        handleSubmit(formData)
-        history.push("/")
+        event.preventDefualt();
+        handleSubmit(formData);
+        history.push("/");
     }
 
     return (
@@ -24,15 +24,29 @@ const Form = ({initialTodo, handleSubmit, buttonLabel, history}) => {
             <div className="row">
                 <div className="four columns">
                     <label htmlFor="name">Name</label>
-                    <input type="text" onChange={handleChange} value={formData?.name} name="name" id="" />
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        value={formData.name} 
+                        name="name" 
+                    />
                 </div>
                 <div className="four columns">
                     <label htmlFor="contact">Contact</label>
-                    <input type="text" onChange={handleChange} value={formData?.contact} name="contact" id="" />
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        value={formData.contact} 
+                        name="contact" 
+                    />
                 </div>
                 <div className="four columns">    
                     <label htmlFor="sport">Sport</label>
-                    <select name="sport" onChange={handleChange} value={formData?.sport} id="">
+                    <select 
+                        name="sport" 
+                        onChange={handleChange} 
+                        value={formData.sport} 
+                    >
                         <option value="Snowboarding">Snowboarding</option>
                         <option value="Skateboarding">Skateboarding</option>
                         <option value="Rock Climbing">Rock Climbing</option>
@@ -44,17 +58,33 @@ const Form = ({initialTodo, handleSubmit, buttonLabel, history}) => {
             <div className="row">
                 <div className="twelve columns">
                     <label htmlFor="desc">Bio</label>
-                    <input style={{height: "100px", width: "60%"}} type="text" onChange={handleChange} value={formData?.desc} name="desc" id="" />
+                    <input 
+                        style={{height: "100px", width: "60%"}} 
+                        type="text" 
+                        onChange={handleChange} 
+                        value={formData.desc} 
+                        name="desc" 
+                    />
                 </div>
             </div>
             <div className="row">
                 <div className="six columns">
                     <label htmlFor="image">Image Link</label>
-                    <input type="text" onChange={handleChange} value={formData?.image} name="image" id="" />
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        value={formData.image} 
+                        name="image" 
+                    />
                 </div>
                 <div className="six columns">
                     <label htmlFor="video">Video Link</label>
-                    <input type="text" onChange={handleChange} value={formData?.video} name="video" id="" />
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        value={formData.video} 
+                        name="video" 
+                    />
                 </div>
             </div>
             <br />
