@@ -7,7 +7,7 @@ const Post = ({post}) => {
     return (
         <div>
             <Link to={`/post/${post.id}`}>
-                <h1><img src={post.image} alt={post.name} /></h1>
+                <img src={post.image} alt={post.name} />
             </Link>
             <h2>{post.name}</h2>
         </div>
