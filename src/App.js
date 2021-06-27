@@ -10,10 +10,24 @@ import {Route, Switch} from 'react-router-dom';
 
 
 function App(props) {
-
+  // API URL
   const url = "https://xaegis-backend-two-gd.herokuapp.com";
-
+  //State to hold Posts
   const [posts, setPosts] = useState([]);
+
+  // ----- Functions -----
+
+  // Function to get Posts from API
+  const getPosts = async () => {
+    const response = await fetch(url + "/posts");
+    const data = await response.json()
+    setPosts(data)
+  }
+
+  // ----- useEffects -----
+  useEffect(() => {
+    getPosts()
+  }, [])
 
   return (
     <div>
