@@ -11,7 +11,7 @@ import {Route, Switch} from 'react-router-dom';
 
 function App(props) {
 
-  const url = "https://xaegis-backend-two-gd.herokuapp.com/posts";
+  const url = "https://xaegis-backend-two-gd.herokuapp.com";
 
   const [posts, setPosts] = useState([]);
 
@@ -22,7 +22,13 @@ function App(props) {
         <Route
           exact
           path="/"
-          render={(routerProps) => <PostIndex {...routerProps} posts={posts} />}
+          render={(routerProps) => <Home {...routerProps} posts={posts} />}
+        />
+        <Route
+          path="/posts"
+          render={(routerProps) => (
+            <PostIndex {...routerProps} posts={posts} />
+          )}
         />
         <Route
           path="/post/:id"
