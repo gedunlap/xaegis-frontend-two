@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import PostIndex from "./pages/PostIndex";
+import PostShow from "./pages/PostShow";
+import Form from "./pages/Form";
+import Nav from "./components/Nav";
+// Import React and hooks
+import React, { useState, useEffect } from "react";
+// Import components from React Router
+import {Route, Switch} from 'react-router-dom';
 
-function App() {
+
+function App(props) {
+
+  const url = "https://xaegis-backend-two-gd.herokuapp.com/posts";
+
+  const [posts, setPosts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={(routerProps) => <PostIndex {...routerProps} posts={posts} />}
+        />
+        <Route
+          path="/post/:id"
+          render={(routerProps) => (
+            <PostShow {...routerProps} posts={posts} />
+          )}
+        />
+        <Route
+          path="/new"
+          render={(routerProps) => <Form {...routerProps} />}
+        />
+        <Route
+          path="/edit"
+          render={(routerProps) => <Form {...routerProps} />}
+        />
+      </Switch>
     </div>
   );
 }
+
 
 export default App;
