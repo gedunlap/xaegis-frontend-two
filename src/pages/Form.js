@@ -13,9 +13,9 @@ const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
 
     // handleSubmit
     const handleSubmission = (event) => {
-        event.preventDefualt();
+        event.preventDefault();
         handleSubmit(formData);
-        history.push("/");
+        history.push("/PostIndex");
     }
 
     return (

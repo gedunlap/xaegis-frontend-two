@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 const Nav = (props) => {
     return (
         <div id="navbar">
-        <Link to="/"><img src="https://i.imgur.com/Nuqv0mY.png" alt="" className="navlogo" id="navitem"/></Link>
-        <Link to="/PostIndex" id="navitem">Gallery</Link>
+            <Link id="navitem" onClick={() => window.location.replace("/#about")}>About</Link>
+            <Link to="/"><img src="https://i.imgur.com/Nuqv0mY.png" alt="" className="navlogo" id="navitem"/></Link>
+            <Link to="/PostIndex" id="navitem">Gallery</Link>
         </div>
     )
 }

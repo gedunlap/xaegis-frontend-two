@@ -3,15 +3,53 @@
   justify-content: space-around;
   align-items: center;
   background-color: black;
+  height: 100px;
+  border-bottom: solid rgb(255,175,255) 3px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
 }
 
 #navitem {
   margin: 10px 0 10px 0;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  color: rgb(38, 155, 201);
+}
+
+#navitem:hover {
+  color: white;
 }
 
 .navlogo {
   height: 50px;
   border-radius: 25px;
+}
+
+.navlogo:hover {
+  border: solid rgb(255,175,255);
+}
+
+.homepage {
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.herobox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 33%;
+  background-color: black;
+}
+
+.aboutbox {
+  border: solid;
+  width: 100vw;
+  height: 66%;
 }
 
 .form {
@@ -21,7 +59,75 @@
   width: 60%;
 }
 
-/* #formrow {
+.postbox {
+  width: 100vw;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
+
+#createbtn {
+  text-align: center;
+  margin: 30px;
+}
+
+.postitem {
   display: flex;
-  justify-content: space-between;
-} */
+  flex-wrap: wrap;
+}
+
+.postimg {
+  max-width: 300px;
+}
+
+#singlepost {
+  border: solid;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*----------- SlideShow -----------*/
+
+.slidebox {
+  height: 500px;
+  background-color: black;
+  display: flex;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+}
+
+.slideshowDots {
+  text-align: center;
+}
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  color: teal;
+  font-weight: 900;
+}
+
+.slideshowDot.active {
+  color: rgb(255,175,255);
+  font-weight: 900;
+  font-size: 30px;
+}

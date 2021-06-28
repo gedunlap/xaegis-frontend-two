@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 
 const Post = ({post}) => {
     return (
-        <div>
+        <div className="four columns" id="singlepost">
             <Link to={`/post/${post.id}`}>
-                <img src={post.image} alt={post.name} />
+                <img className="postimg" src={post.image} alt={post.name} />
             </Link>
-            <h2>{post.name}</h2>
+            <Link to={`/post/${post.id}`}><h2>{post.name}</h2></Link>
         </div>
     )
 }

@@ -46,6 +46,7 @@ function App(props) {
       body: JSON.stringify(newPost),
     })
     getPosts()
+    props.history.push("/PostIndex")
   }
 
   // Function to select Post
@@ -63,7 +64,6 @@ function App(props) {
       },
       body: JSON.stringify(post)
     })
-    console.log(post.id)
     getPosts()
   }
 
@@ -83,7 +83,6 @@ function App(props) {
   return (
     <div>
       <Nav />
-      <Link to="/new"><button className="button-primary">Create New</button></Link>
       <Switch>
         <Route
           exact
