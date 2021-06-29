@@ -14,7 +14,13 @@ const Home = (props) => {
                 <Slideshow />
             </div>
             <div className="aboutbox">
-                <h1 id="about">About</h1>
+                <div className="aboutboxtop">
+                    <div>XAEGIS</div>
+                </div>
+                <div className="aboutboxbottom"  href="#about">
+                    <div className="aboutleft">XAegis is devoted to</div>
+                    <div className="aboutright">We are here so the most devoted and hard working extreme atheletes in the world may get their name out there in order to achieve their goals.</div>
+                </div>
             </div>
         </div>
     )

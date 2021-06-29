@@ -46,12 +46,6 @@
   background-color: black;
 }
 
-.aboutbox {
-  border: solid;
-  width: 100vw;
-  height: 66%;
-}
-
 .form {
   text-align: center;
   border: solid black;
@@ -87,12 +81,40 @@
   margin-bottom: 15px;
 }
 
+/*----------- About -----------*/
+
+.aboutbox {
+  border: solid;
+  width: 100vw;
+  height: 66%;
+  text-align: center;
+}
+
+.aboutboxtop {
+  color: black;
+  font-size: 100px;
+  border-bottom: solid black 3px;
+}
+
+.aboutboxbottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutright,.aboutleft {
+  width: 50%;
+  border: solid;
+  height: 100%;
+  padding: 50px;
+}
+
 /*----------- SlideShow -----------*/
 
 .slidebox {
   height: 500px;
   background-color: black;
   display: flex;
+  width: 100vw;
 }
 
 .slideshow {
