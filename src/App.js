@@ -112,6 +112,7 @@ function App(props) {
               initialPost={nullPost}
               handleSubmit={addPosts}
               buttonLabel="Create Post" 
+              h1Label="Create A New Post"
             />
           )}
         />
@@ -122,7 +123,8 @@ function App(props) {
                {...routerProps}
                initialPost={targetPost}
                handleSubmit={updatePost}
-               buttonLabel="Update" 
+               buttonLabel="Update"
+               h1Label="Update This Post"
             />
           )}
         />

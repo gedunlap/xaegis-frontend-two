@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
+const Form = ({initialPost, handleSubmit, buttonLabel, h1Label, history}) => {
 
     const [formData, setFormData] = useState(initialPost);
 
@@ -19,6 +19,8 @@ const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
     }
 
     return (
+        <div className="formpage">
+            <h1>{h1Label}</h1>
         <div className="container form">
         <form onSubmit={handleSubmission}>
             <div className="row">
@@ -58,7 +60,7 @@ const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
             <div className="row">
                 <div className="twelve columns">
                     <label htmlFor="desc">Bio</label>
-                    <input 
+                    <textarea 
                         style={{height: "100px", width: "60%"}} 
                         type="text" 
                         onChange={handleChange} 
@@ -90,6 +92,7 @@ const Form = ({initialPost, handleSubmit, buttonLabel, history}) => {
             <br />
             <input className="button-primary" type="submit" value={buttonLabel} />
         </form>
+        </div>
         </div>
     )
 }

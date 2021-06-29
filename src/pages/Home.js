@@ -1,5 +1,5 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Slideshow from '../components/Slideshow'
 
 
@@ -30,6 +30,9 @@ const Home = (props) => {
                         <p className="aboutp">Every post to Xaegis brings you one step closer to furthing your sports career toward the future you've always dreamed of.</p>
                         <img className="aboutimg" src="https://i.imgur.com/36iDssd.jpg?1" alt="" />
                     </div>
+                </div>
+                <div className="row">
+                    <Link  id="navitem" onClick={() => window.location.replace("/")} >^ Back To Top ^</Link>
                 </div>
             </div>
         </div>

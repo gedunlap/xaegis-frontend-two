@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 #navitem {
@@ -44,13 +44,6 @@
   width: 100vw;
   height: 33%;
   background-color: black;
-}
-
-.form {
-  text-align: center;
-  border: solid black;
-  margin-top: 10%;
-  width: 60%;
 }
 
 .postbox {
@@ -161,7 +154,28 @@
   font-size: 30px;
 }
 
+/*---------- Form --------*/
+
+.formpage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  text-align: center;
+  border: solid black;
+  margin-top: 10%;
+  width: 60%;
+}
+
 @media only screen and (max-width: 600px) {
+  .aboutboxtop {
+    font-size: 80px;
+  }
+
   .aboutboxbottom {
     flex-wrap: wrap;
   }
@@ -176,5 +190,13 @@
     width: 100%;
     background-color: black;
     height: 3px;
+  }
+  
+  .aboutimg {
+    width: 90%;
+  }
+
+  .formpage {
+    margin-top: 150px;
   }
 }
