@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 // Import React and hooks
 import React, { useState, useEffect } from "react";
 // Import components from React Router
-import {Route, Switch, Link} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 
 function App(props) {

@@ -134,10 +134,10 @@
   width: 100%;
 }
 
-.slideshowDots {
+.slideshowXs {
   text-align: center;
 }
-.slideshowDot {
+.slideshowX {
   display: inline-block;
   height: 20px;
   width: 20px;
@@ -148,7 +148,7 @@
   font-weight: 900;
 }
 
-.slideshowDot.active {
+.slideshowX.active {
   color: rgb(255,175,255);
   font-weight: 900;
   font-size: 30px;

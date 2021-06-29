@@ -50,11 +50,10 @@ function Slideshow() {
           <div className="slide"></div>
         </div>
 
-        <div className="slideshowDots">
+        <div className="slideshowXs">
             {sports.map((_, idx) => (
                 <div key={idx} 
-                className="slideshowDot"
-                className={`slideshowDot${index === idx ? " active" : ""}`}
+                className={`slideshowX${index === idx ? " active" : ""}`}
                 onClick={() => {setIndex(idx)}}
                 >X</div>
             ))}
