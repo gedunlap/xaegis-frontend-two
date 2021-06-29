@@ -1,5 +1,5 @@
 import React from 'react'
-import Post from '../components/Post'
+import Post from '../components/PostComponent'
 import {Link} from 'react-router-dom'
 
 const PostIndex = (props) => {
