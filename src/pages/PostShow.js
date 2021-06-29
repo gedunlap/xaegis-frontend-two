@@ -8,16 +8,34 @@ const PostShow = ({posts, match, edit, deletePost}) => {
     const post = posts.find((post) => post.id === id)
 
     return (
-        <div>
-            <h1>{post?.name}</h1>
-            <img src={post?.image} alt={post?.name} />
-            <h2>{post?.sport}</h2>
-            <h4>{post?.contact}</h4>
-            <h4>{post?.desc}</h4>
-            <ReactPlayer url={post?.video} controls={true} />
-            <button onClick={(event) => edit(post)}>Edit</button>
-            <button onClick={(event) => deletePost(post)}>Delete</button>
-            <Link to="/PostIndex"><button>Back</button></Link>
+        <div className="showpage">
+            <div className="row twelve columns showtop">
+                <div className="six columns">
+                    <img className="showimg" src={post?.image} alt={post?.name} />
+                </div>
+                <div className="six columns showname">
+                    <h1>{post?.name}</h1>
+                    <h2>{post?.sport}</h2>
+                    <h4>{post?.contact}</h4>
+                </div>
+            </div>
+            <div className="row twelve columns showdesc">
+                <div className="eight columns">
+                    <h4>{post?.desc}</h4>
+                </div>
+            </div>
+            <div className="row twelve columns showvideo">
+                <ReactPlayer url={post?.video} controls={true} />
+            </div>
+            <div className="row twelve columns showbuttons">
+                <div>
+                    <button  className="button-primary" id="showbutton" onClick={(event) => edit(post)}>Edit</button>
+                    <button  className="button" id="showbutton" style={{backgroundColor:"red", color:"white"}} onClick={(event) => deletePost(post)}>Delete</button>
+                </div>
+                <div>
+                    <Link to="/PostIndex"><button id="showbutton" className="button-primary">Back</button></Link>
+                </div>
+            </div>
         </div>
     )
 }

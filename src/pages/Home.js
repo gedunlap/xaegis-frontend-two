@@ -15,9 +15,9 @@ const Home = (props) => {
             </div>
             <div className="aboutbox">
                 <div className="row">
-                <div className="twelve columns aboutboxtop">
-                    <div>XAEGIS</div>
-                </div>
+                    <div className="twelve columns aboutboxtop">
+                        <div>XAEGIS</div>
+                    </div>
                 </div>
                 
                 <div className="row aboutboxbottom"  id="about">
@@ -32,7 +32,7 @@ const Home = (props) => {
                     </div>
                 </div>
                 <div className="row">
-                    <Link  id="navitem" onClick={() => window.location.replace("/")} >^ Back To Top ^</Link>
+                    <Link  className="indexlink" style={{textDecoration:"none"}} onClick={() => window.location.replace("/")} >^ Back To Top ^</Link>
                 </div>
             </div>
         </div>
