@@ -17,7 +17,7 @@ const Home = (props) => {
                 <div className="aboutboxtop">
                     <div>XAEGIS</div>
                 </div>
-                <div className="aboutboxbottom"  href="#about">
+                <div className="aboutboxbottom"  id="about">
                     <div className="aboutleft">XAegis is devoted to</div>
                     <div className="aboutright">We are here so the most devoted and hard working extreme atheletes in the world may get their name out there in order to achieve their goals.</div>
                 </div>
