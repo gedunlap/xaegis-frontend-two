@@ -10,6 +10,7 @@ const Post = ({post}) => {
                 <img className="postimg" src={post.image} alt={post.name} />
             </Link>
             <Link to={`/post/${post.id}`}><h2>{post.name}</h2></Link>
+            <h4>{post.sport}</h4>
         </div>
     )
 }
