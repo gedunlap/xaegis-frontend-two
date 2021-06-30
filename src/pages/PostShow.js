@@ -13,7 +13,7 @@ const PostShow = ({posts, match, edit, deletePost}) => {
                 <div className="six columns">
                     <img className="showimg" src={post?.image} alt={post?.name} />
                 </div>
-                <div className="six columns showname">
+                <div className="six columns showname" className="showname">
                     <h1>{post?.name}</h1>
                     <h2>{post?.sport}</h2>
                     <h4>{post?.contact}</h4>
