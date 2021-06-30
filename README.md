@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# XAegis Sponsorship Portal
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+It is hosted on:
 
-In the project directory, you can run:
+[Vercel](https://xaegis.vercel.app/) 
 
-### `npm start`
+and
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Netlify](https://clever-ride-e72a74.netlify.app/post/13)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## App Overview
 
-### `npm test`
+I intended this project to be a collective of extreme sports athletes in search of sponsorship. The original idea was for users to have an account where they could post images and videos of them participating in there sport. Then potential sponsors would be able to browse the app and look for athletes by sport. I ran into a lot of trouble trying to implement Auth (JWT, Sessions and Firebase) and spent far too much time struggling with each. At this time I do not have Auth functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## CSS Framwork
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Skeleton](http://getskeleton.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I've become a very big fan of skeleton over the last two projects due to its mobile resonsiveness out of the box as well as clean/simple designs and ease of use.
 
-### `npm run eject`
+## Backend API
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Ruby on Rails](https://rubyonrails.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I created a custom API for use in this app using Ruby on Rails. I really like how simple it is to set up a project. However I found it slightly annoying when needing to go back and change migrations or data needed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Frontend
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I used create-react-app to create the front end for this project. I am really enjoying React as well. It seems much easier to me to keep organized using components and pages and linking them throughout. As well as the ease of installing whatever packages you may need.
 
-## Learn More
+#### Future Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would like to return here to implement the Auth and create an actual user friendly account interface.
