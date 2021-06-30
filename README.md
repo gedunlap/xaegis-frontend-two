@@ -30,7 +30,15 @@ I created a custom API for use in this app using Ruby on Rails. I really like ho
 
 ## Frontend
 
+[React](https://reactjs.org/)
+
 I used create-react-app to create the front end for this project. I am really enjoying React as well. It seems much easier to me to keep organized using components and pages and linking them throughout. As well as the ease of installing whatever packages you may need.
+
+### Embedded Video
+
+[React Player](https://www.npmjs.com/package/react-player)
+
+Very easy to add to a project and utilize.
 
 #### Future Notes
 
